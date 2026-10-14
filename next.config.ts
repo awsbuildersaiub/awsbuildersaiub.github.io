@@ -5,8 +5,17 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
+  output: "export",
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "awssbggeu.com",
+      },
+    ],
+  },
+  allowedDevOrigins: ["192.168.31.154", "localhost:3000"],
   turbopack: {
     rules: {
       "*.css": {
